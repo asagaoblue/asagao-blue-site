@@ -1,0 +1,109 @@
+---
+const plans = [
+  {
+    name: "Starter",
+    badge: "Free Plan",
+    price: "¥0",
+    period: "/ ずっと無料",
+    description: "個人開発者や小規模チームがAI自動化を試すためのスタータープラン。",
+    features: [
+      "月間 1,000 タスク実行",
+      "自律型エージェント最大 2体",
+      "標準SaaSコネクタ (Slack, Notion, Google)",
+      "コミュニティサポート",
+      "実行履歴 7日間保存"
+    ],
+    cta: "無料で試す",
+    popular: false,
+    buttonStyle: "bg-slate-800 hover:bg-slate-700 text-white border border-slate-700"
+  },
+  {
+    name: "Professional",
+    badge: "Most Popular",
+    price: "¥9,800",
+    period: "/ 月 (年払い)",
+    description: "業務効率化を本格展開する成長企業やスタートアップ向けプラン。",
+    features: [
+      "月間 30,000 タスク実行",
+      "自律型エージェント最大 10体",
+      "全100+ コネクタ利用可能",
+      "Human-in-the-loop 人間承認機能",
+      "優先メール・Slackサポート",
+      "実行履歴 90日間保存"
+    ],
+    cta: "14日間無料トライアル",
+    popular: true,
+    buttonStyle: "bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white shadow-xl shadow-indigo-600/30"
+  },
+  {
+    name: "Enterprise",
+    badge: "Custom",
+    price: "お問い合わせ",
+    period: "",
+    description: "セキュリティ要件・専任サポートが必須の大規模エンタープライズ向け。",
+    features: [
+      "タスク実行数・エージェント数 無制限",
+      "専用プライベートVPC / オンプレミス対応",
+      "SLA 99.9% 稼働率保証",
+      "SOC2 Type II / ISO27001 監査レポート提供",
+      "専任カスタマーサクセス・導入支援",
+      "SSO (Okta / SAML / Azure AD) 連携"
+    ],
+    cta: "営業担当に相談する",
+    popular: false,
+    buttonStyle: "bg-slate-800 hover:bg-slate-700 text-white border border-slate-700"
+  }
+];
+---
+
+<section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+  <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+      Pricing Plans
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+      組織の規模に合わせて選べる、<span class="text-gradient">明快な料金体系</span>
+    </h2>
+    <p class="text-slate-400 text-base leading-relaxed">
+      無料トライアルからスタート可能。クレジットカード不要で、今すぐ全機能をお試しいただけます。
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+    {plans.map((p) => (
+      <div class={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 relative ${p.popular ? 'glass-panel-glow border-indigo-500/50 scale-[1.02] shadow-2xl' : 'glass-panel border-slate-800/80 hover:border-slate-700'}`}>
+        {p.popular && (
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-indigo-500 to-sky-400 text-white text-[11px] font-bold tracking-wider uppercase shadow-md">
+            RECOMMENDED
+          </div>
+        )}
+
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-white">{p.name}</h3>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono border border-slate-700">{p.badge}</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-6">{p.description}</p>
+          <div class="flex items-baseline gap-1 mb-8 pb-6 border-b border-slate-800">
+            <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono">{p.price}</span>
+            <span class="text-xs text-slate-400">{p.period}</span>
+          </div>
+
+          <div class="space-y-3 mb-8">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 block mb-2">含まれる機能:</span>
+            {p.features.map((f) => (
+              <div class="flex items-center gap-2.5 text-xs text-slate-300">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{f}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <a href="#contact" class={`w-full py-3 px-4 rounded-xl text-center text-xs font-semibold transition-all duration-200 block ${p.buttonStyle}`}>
+          {p.cta}
+        </a>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+{
+  "name": "saas-corporate-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "XDG_CONFIG_HOME=/tmp/.config astro dev --host 0.0.0.0",
+    "start": "XDG_CONFIG_HOME=/tmp/.config astro dev --host 0.0.0.0",
+    "build": "XDG_CONFIG_HOME=/tmp/.config astro build",
+    "preview": "XDG_CONFIG_HOME=/tmp/.config astro preview --host 0.0.0.0",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.4.2",
+    "lucide-astro": "^0.477.0",
+    "tailwindcss": "^3.4.17"
+  }
+}

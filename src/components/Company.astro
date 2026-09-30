@@ -1,0 +1,58 @@
+---
+const companyInfo = [
+  { label: "会社名", value: "株式会社ネビュラフロー (NebulaFlow Inc.)" },
+  { label: "設立", value: "2024年4月1日" },
+  { label: "代表取締役", value: "桐生 翔太 / 代表取締役CEO" },
+  { label: "資本金", value: "1億5,000万円（資本準備金含む）" },
+  { label: "所在地", value: "〒100-0004 東京都千代田区大手町1-1-1 架空テックイノベーションタワー 14F（※架空の住所）" },
+  { label: "事業内容", value: "自律型エンタープライズAIワークフロー統合SaaS「NebulaFlow」の開発・提供、AI導入コンサルティング" },
+  { label: "主要取引銀行", value: "架空みらい銀行 大手町支店 / サンプル信託銀行" }
+];
+---
+
+<section id="company" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800">
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+        About Us
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        会社概要・ミッション
+      </h2>
+      <p class="text-slate-400 text-base leading-relaxed">
+        テクノロジーの力で人類の反復作業をゼロにし、一人ひとりが持つ固有の創造性と情熱を最大限に引き出す未来を切り拓きます。
+      </p>
+    </div>
+
+    <!-- Mission & Vision Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <span class="text-xs font-mono font-semibold text-indigo-400 mb-2 block">OUR MISSION</span>
+        <h3 class="text-lg font-bold text-white mb-2">知的労働の自律化で、創造性のフロンティアを拓く</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          AIを単なるツールとしてではなく、チームの頼もしい自律的パートナーとして昇華させ、誰もが思い描いたアイデアを即日実現できる社会基盤を構築します。
+        </p>
+      </div>
+
+      <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+        <span class="text-xs font-mono font-semibold text-sky-400 mb-2 block">OUR VALUES</span>
+        <h3 class="text-lg font-bold text-white mb-2">極限のシンプルさと、妥協なき堅牢性</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          どれほど高度なマルチエージェント技術も、使う人間にとって直感的でなければ意味がありません。美しく使いやすく、何より安全・堅牢なシステムを提供し続けます。
+        </p>
+      </div>
+    </div>
+
+    <!-- Company Detail Table -->
+    <div class="border-t border-slate-800/80 pt-8">
+      <dl class="divide-y divide-slate-800/60 text-xs sm:text-sm">
+        {companyInfo.map((item) => (
+          <div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+            <dt class="font-semibold text-slate-300">{item.label}</dt>
+            <dd class="mt-1 text-slate-400 sm:col-span-2 sm:mt-0 font-light">{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>

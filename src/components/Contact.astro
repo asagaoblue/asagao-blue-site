@@ -1,0 +1,113 @@
+---
+---
+
+<section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <!-- Left Info -->
+    <div class="lg:col-span-5">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+        Contact & Demo
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        お気軽にお問い合わせ・<br />
+        資料をご請求ください
+      </h2>
+      <p class="text-slate-400 text-sm leading-relaxed mb-8">
+        導入に関するご相談、自社環境への適合性診断、エンタープライズ向けカスタマイズのご要望など、専門のソリューションエンジニアが丁寧に対応いたします。
+      </p>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-indigo-400 border border-slate-700">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span class="block text-slate-500 text-[11px]">メールでのお問い合わせ</span>
+            <span class="font-mono text-slate-200">contact@example.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 border border-slate-700">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <span class="block text-slate-500 text-[11px]">お電話でのお問い合わせ</span>
+            <span class="font-mono text-slate-200">03-0000-0000 <span class="text-slate-500 font-sans text-xs">（平日 10:00〜18:00 ※架空番号）</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Contact Form (Mock with interactive JS feedback) -->
+    <div class="lg:col-span-7 glass-panel-glow p-8 sm:p-10 rounded-3xl border border-indigo-500/25">
+      <form id="contact-form" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">貴社名 / 組織名 <span class="text-rose-400">*</span></label>
+            <input type="text" required placeholder="例: 株式会社サンプル" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">ご担当者名 <span class="text-rose-400">*</span></label>
+            <input type="text" required placeholder="例: 山田 太郎" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">メールアドレス <span class="text-rose-400">*</span></label>
+            <input type="email" required placeholder="name@company.com" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">お問い合わせ項目</label>
+            <select class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
+              <option>14日間無料トライアルの申し込み</option>
+              <option>サービス詳細資料の請求</option>
+              <option>エンタープライズプランのご相談</option>
+              <option>技術提携・協業のお問い合わせ</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">ご相談・ご要望の詳細</label>
+          <textarea rows="4" placeholder="現在の自動化の課題や、連携させたいSaaS・システム等があればご記入ください。" class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"></textarea>
+        </div>
+
+        <div class="flex items-start gap-2.5">
+          <input type="checkbox" id="privacy" required class="mt-0.5 rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-indigo-500 shrink-0" />
+          <label for="privacy" class="text-[11px] text-slate-400 leading-relaxed cursor-pointer">
+            個人情報の取り扱いおよび利用規約に同意します（※本フォームは架空デモのため送信内容は外部へ送られません）。
+          </label>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-semibold text-xs shadow-xl shadow-indigo-600/30 hover:scale-[1.01] active:scale-[0.99] transition-all">
+          送信内容を確認して送信する（デモ）
+        </button>
+
+        <!-- Dynamic Success Message Alert -->
+        <div id="form-alert" class="hidden p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs">
+          <div class="flex items-center gap-2 font-bold mb-1">
+            <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            お問い合わせを受け付けました（デモ動作完了）
+          </div>
+          <p class="text-slate-300 text-[11px]">
+            ※本サイトはポートフォリオ用の架空のWebサイトです。実際のメール送信や個人情報の保存は行われませんでした。
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const alertBox = document.getElementById('form-alert');
+  if (form && alertBox) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alertBox.classList.remove('hidden');
+      form.reset();
+    });
+  }
+</script>

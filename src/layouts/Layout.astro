@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "NebulaFlow | 自律型AIワークフロー統合SaaS",
+  description = "株式会社ネビュラフローが提供する次世代のエンタープライズ向けAIワークフローオーケストレーションプラットフォーム。（※本サイトは制作ポートフォリオ用の架空のWebサイトです）"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- 検索除外（ポートフォリオ・架空サイト保護用） -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col font-sans">
+    <!-- 架空サイト告知トップバナー -->
+    <div class="bg-indigo-950/80 border-b border-indigo-500/30 text-indigo-200 text-xs py-1.5 px-4 text-center font-medium sticky top-0 z-50 backdrop-blur-md">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        【ポートフォリオ用架空サイト】本サイトは制作実績・検証用の架空Webサイトです。実在する企業・団体・サービス等とは一切関係ありません。
+      </span>
+    </div>
+
+    <slot />
+  </body>
+</html>
